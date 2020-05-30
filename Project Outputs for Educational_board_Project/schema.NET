@@ -1,0 +1,169 @@
+Wire List
+
+<<< Component List >>>
+100nF 1206                      C1             KEMT-1206-2_M
+10uF 1206                       C2             CAPC3216X180X50ML20T25
+100nF 1206                      C3             KEMT-1206-2_M
+100nF 1206                      C4             KEMT-1206-2_M
+22pF 1206                       C5             FP-C1206C-EB-MFG
+ANTENA                          J1             61300111121
+151033BS03000                   LED1           Type 3mm
+1033BS03000                     LED2           Type 3mm
+151033BS03000                   LED3           Type 3mm
+151033BS03000                   LED4           Type 3mm
+151033BS03000                   LED5           Type 3mm
+151033BS03000                   LED6           Type 3mm
+GOLDPIN                         P1             AMPH-68000-102HLF_V
+Goldpin mêski 2x3               P2             SMTC-TSW-103-08-X-D
+Goldpin mêski 2x3               P3             SMTC-TSW-103-08-X-D
+10k 1206                        R1             RESC3216X60X45ML10T20
+1206 10k                        R2             RESC3216X60X45ML10T20
+4.7k 1206                       R3             RESC3216X60X45ML15T20
+1k 1206 5%                      R4             RESC3216X70X50LL05T20
+1k 1206 5%                      R5             RESC3216X70X50LL05T20
+1k 1206 5%                      R6             RESC3216X70X50LL05T20
+100k 1206                       R7             RESC3216X70X50LL05T20
+1k 1206 5%                      R8             RESC3216X70X50LL05T20
+1k 1206 5%                      R9             RESC3216X70X50LL05T20
+1k 1206 5%                      R10            RESC3216X70X50LL05T20
+TL3301NF160QG                   SW1            ESWI-TL3301NF160QG_V
+MCP100-450DI/TO                 U1             TO-92-TO3
+RXB6                            U2             JMR-TX1
+HCS512                          U3             *DIP794W47P254L2324H457Q18
+
+<<< Wire List >>>
+
+  NODE  REFERENCE  PIN #   PIN NAME       PIN TYPE    PART VALUE
+
+[00001] Vdd
+        C1         2       2              PASSIVE     100nF 1206
+        C2         2       2              PASSIVE     10uF 1206
+        C3         2       2              PASSIVE     100nF 1206
+        C4         2       2              PASSIVE     100nF 1206
+        P2         Vdd     Vdd            INPUT       Goldpin mêski 2x3
+        P3         Vdd     Vdd            INPUT       Goldpin mêski 2x3
+        R1         1       1              PASSIVE     10k 1206
+        R3         2       2              PASSIVE     4.7k 1206
+        U1         2       VDD            POWER       MCP100-450DI/TO
+        U2         4 5     VDD            POWER       RXB6
+        U3         Vdd     14             PASSIVE     HCS512
+
+[00002] NetC5_1
+        C5         1       1              PASSIVE     22pF 1206
+        R3         1       1              PASSIVE     4.7k 1206
+        U3         OSCin   16             PASSIVE     HCS512
+
+[00003] NetJ1_1
+        J1         1       1              PASSIVE     ANTENA
+        U2         1       ANT            OUTPUT      RXB6
+
+[00004] NetLED1_2
+        LED1       2       A              PASSIVE     151033BS03000
+        R4         1       1              PASSIVE     1k 1206 5%
+
+[00005] NetLED2_2
+        LED2       2       A              PASSIVE     1033BS03000
+        R5         1       1              PASSIVE     1k 1206 5%
+
+[00006] NetLED3_2
+        LED3       2       A              PASSIVE     151033BS03000
+        R6         1       1              PASSIVE     1k 1206 5%
+
+[00007] NetLED4_2
+        LED4       2       A              PASSIVE     151033BS03000
+        R8         1       1              PASSIVE     1k 1206 5%
+
+[00008] NetLED5_2
+        LED5       2       A              PASSIVE     151033BS03000
+        R10        2       2              PASSIVE     1k 1206 5%
+
+[00009] NetLED6_2
+        LED6       2       A              PASSIVE     151033BS03000
+        R9         1       1              PASSIVE     1k 1206 5%
+
+[00010] NetP1_1
+        P1         1       1              PASSIVE     GOLDPIN
+        U2         6       DE             INPUT       RXB6
+
+[00011] NetP2_MISO
+        P2         MISO    MISO           INPUT       Goldpin mêski 2x3
+        P3         MISO    MISO           INPUT       Goldpin mêski 2x3
+
+[00012] NetR2_1
+        R2         1       1              PASSIVE     1206 10k
+        U1         1       R\S\T\         OUTPUT      MCP100-450DI/TO
+
+[00013] NetR4_2
+        R4         2       2              PASSIVE     1k 1206 5%
+        U3         LRNOUT  2              PASSIVE     HCS512
+
+[00014] NetR5_2
+        R5         2       2              PASSIVE     1k 1206 5%
+        U3         S0      6              PASSIVE     HCS512
+
+[00015] NetR6_2
+        R6         2       2              PASSIVE     1k 1206 5%
+        U3         S1      7              PASSIVE     HCS512
+
+[00016] NetP2_SCK
+        P2         SCK     SCK            INPUT       Goldpin mêski 2x3
+        P3         SCK     SCK            INPUT       Goldpin mêski 2x3
+        R7         1       1              PASSIVE     100k 1206
+        U3         CLK     12             PASSIVE     HCS512
+
+[00017] NetR1_2
+        R1         2       2              PASSIVE     10k 1206
+        R7         2       2              PASSIVE     100k 1206
+        SW1        3       3              PASSIVE     TL3301NF160QG
+        SW1        4       4              PASSIVE     TL3301NF160QG
+        U3         LRNIN   1              PASSIVE     HCS512
+
+[00018] NetR8_2
+        R8         2       2              PASSIVE     1k 1206 5%
+        U3         S2      8              PASSIVE     HCS512
+
+[00019] NetR9_2
+        R9         2       2              PASSIVE     1k 1206 5%
+        U3         S3      9              PASSIVE     HCS512
+
+[00020] NetR10_1
+        R10        1       1              PASSIVE     1k 1206 5%
+        U3         Vlow    10             PASSIVE     HCS512
+
+[00021] NetU2_7
+        U2         7       DATA           INPUT       RXB6
+        U3         RFIN    18             PASSIVE     HCS512
+        U3         SLEEP   11             PASSIVE     HCS512
+
+[00022] NetP2_MOSI
+        P2         MOSI    MOSI           INPUT       Goldpin mêski 2x3
+        P3         MOSI    MOSI           INPUT       Goldpin mêski 2x3
+        U3         DATA    13             PASSIVE     HCS512
+
+[00023] NetP2_6
+        P2         6       6              PASSIVE     Goldpin mêski 2x3
+        P3         6       6              PASSIVE     Goldpin mêski 2x3
+        R2         2       2              PASSIVE     1206 10k
+        U3         MCLR    4              PASSIVE     HCS512
+
+[00027] GND
+        C1         1       1              PASSIVE     100nF 1206
+        C2         1       1              PASSIVE     10uF 1206
+        C3         1       1              PASSIVE     100nF 1206
+        C4         1       1              PASSIVE     100nF 1206
+        C5         2       2              PASSIVE     22pF 1206
+        LED1       1       K              PASSIVE     151033BS03000
+        LED2       1       K              PASSIVE     1033BS03000
+        LED3       1       K              PASSIVE     151033BS03000
+        LED4       1       K              PASSIVE     151033BS03000
+        LED5       1       K              PASSIVE     151033BS03000
+        LED6       1       K              PASSIVE     151033BS03000
+        P1         2       2              PASSIVE     GOLDPIN
+        P2         GND     GND            INPUT       Goldpin mêski 2x3
+        P3         GND     GND            INPUT       Goldpin mêski 2x3
+        SW1        1       1              PASSIVE     TL3301NF160QG
+        SW1        2       2              PASSIVE     TL3301NF160QG
+        U1         3       VSS            POWER       MCP100-450DI/TO
+        U2         2 3 8   GND            POWER       RXB6
+        U3         GND     5              PASSIVE     HCS512
+
